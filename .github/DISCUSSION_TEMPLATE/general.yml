@@ -1,0 +1,8 @@
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      description: Anything about the drivers that is not a question, an idea or a project to show.
+    validations:
+      required: true

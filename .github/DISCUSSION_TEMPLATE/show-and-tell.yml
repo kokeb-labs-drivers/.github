@@ -1,0 +1,20 @@
+body:
+  - type: input
+    id: drivers
+    attributes:
+      label: Drivers used
+      placeholder: driver-bmp581, driver-pcal9555
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What you built
+      description: The board, the MCU and what it does. Photos and links welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Lessons for the drivers
+      description: Anything the docs should say, or a limit you ran into.

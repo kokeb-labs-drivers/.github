@@ -1,0 +1,19 @@
+body:
+  - type: markdown
+    attributes:
+      value: Announcements are posted by maintainers. Say what changed, which drivers it affects and what to do.
+  - type: textarea
+    id: what
+    attributes:
+      label: What changed
+    validations:
+      required: true
+  - type: input
+    id: drivers
+    attributes:
+      label: Drivers and releases
+      placeholder: driver-pca9685 v0.2.0
+  - type: textarea
+    id: action
+    attributes:
+      label: What users should do

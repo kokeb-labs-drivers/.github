@@ -1,0 +1,26 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask how to use a driver. A bug you can reproduce goes in an issue in the driver's repository, and a
+        vulnerability goes through SECURITY.md, never here.
+  - type: input
+    id: driver
+    attributes:
+      label: Driver and version
+      description: Repository and tag or commit.
+      placeholder: driver-at25040b v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: MCU, RTOS and toolchain
+      placeholder: ESP32-S3, FreeRTOS, ESP-IDF v5.5
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What you are trying to do, what you tried, and the smallest code that shows it.
+    validations:
+      required: true
