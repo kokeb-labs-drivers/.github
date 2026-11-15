@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1176" height="348" viewBox="0 0 1176 348" role="img" aria-labelledby="driver-layers-title driver-layers-desc" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" class="fk">
+<title id="driver-layers-title">A driver sits between your code and the chip</title>
+<desc id="driver-layers-desc">Pipeline in which your application calls a chip driver, the driver talks to a port that moves bytes on your SPI, I2C, UART or ADC bus, and the port drives the chip.</desc>
+<style>
+.fk{--fk-amber-soft:#F1CF93;--fk-amber-strong:#C26A05;--fk-amber-text:#8A3C0B;--fk-amber-tint:#FFF5E3;--fk-blue-soft:#BCD2F9;--fk-blue-strong:#2563EB;--fk-blue-text:#1E429F;--fk-blue-tint:#EAF2FF;--fk-brand-text:#7A360E;--fk-canvas:#FFFFFF;--fk-card:#FFFFFF;--fk-frame:#E2E7EE;--fk-hair:#E2E7EE;--fk-ink:#0E1726;--fk-ink2:#2B3442;--fk-line:#738093;--fk-muted:#566070;--fk-rail:#7C8798;--fk-teal-soft:#A6DCD5;--fk-teal-strong:#0B7A72;--fk-teal-text:#0B5F59;--fk-teal-tint:#E6F6F4;--fk-violet-soft:#D5C5FA;--fk-violet-strong:#7C3AED;--fk-violet-text:#5B21B6;--fk-violet-tint:#F3EEFF;}
+@media (prefers-color-scheme:dark){.fk{--fk-amber-soft:#6A5220;--fk-amber-strong:#FBBF24;--fk-amber-text:#FDE68A;--fk-amber-tint:#2C2310;--fk-blue-soft:#2B4C78;--fk-blue-strong:#60A5FA;--fk-blue-text:#BFDBFE;--fk-blue-tint:#13233A;--fk-brand-text:#F8D27A;--fk-canvas:#0E131A;--fk-card:#151C26;--fk-frame:#283241;--fk-hair:#252F3C;--fk-ink:#E8EDF3;--fk-ink2:#D2DAE4;--fk-line:#6C7889;--fk-muted:#9AA6B5;--fk-rail:#6C7889;--fk-teal-soft:#215A54;--fk-teal-strong:#2BB3A3;--fk-teal-text:#A7F3E6;--fk-teal-tint:#0F2A28;--fk-violet-soft:#4B3A82;--fk-violet-strong:#A78BFA;--fk-violet-text:#DDD6FE;--fk-violet-tint:#221A3A;}}
+:root[data-theme="dark"] .fk,[data-md-color-scheme="slate"] .fk{--fk-amber-soft:#6A5220;--fk-amber-strong:#FBBF24;--fk-amber-text:#FDE68A;--fk-amber-tint:#2C2310;--fk-blue-soft:#2B4C78;--fk-blue-strong:#60A5FA;--fk-blue-text:#BFDBFE;--fk-blue-tint:#13233A;--fk-brand-text:#F8D27A;--fk-canvas:#0E131A;--fk-card:#151C26;--fk-frame:#283241;--fk-hair:#252F3C;--fk-ink:#E8EDF3;--fk-ink2:#D2DAE4;--fk-line:#6C7889;--fk-muted:#9AA6B5;--fk-rail:#6C7889;--fk-teal-soft:#215A54;--fk-teal-strong:#2BB3A3;--fk-teal-text:#A7F3E6;--fk-teal-tint:#0F2A28;--fk-violet-soft:#4B3A82;--fk-violet-strong:#A78BFA;--fk-violet-text:#DDD6FE;--fk-violet-tint:#221A3A;}
+:root[data-theme="light"] .fk,[data-md-color-scheme="default"] .fk{--fk-amber-soft:#F1CF93;--fk-amber-strong:#C26A05;--fk-amber-text:#8A3C0B;--fk-amber-tint:#FFF5E3;--fk-blue-soft:#BCD2F9;--fk-blue-strong:#2563EB;--fk-blue-text:#1E429F;--fk-blue-tint:#EAF2FF;--fk-brand-text:#7A360E;--fk-canvas:#FFFFFF;--fk-card:#FFFFFF;--fk-frame:#E2E7EE;--fk-hair:#E2E7EE;--fk-ink:#0E1726;--fk-ink2:#2B3442;--fk-line:#738093;--fk-muted:#566070;--fk-rail:#7C8798;--fk-teal-soft:#A6DCD5;--fk-teal-strong:#0B7A72;--fk-teal-text:#0B5F59;--fk-teal-tint:#E6F6F4;--fk-violet-soft:#D5C5FA;--fk-violet-strong:#7C3AED;--fk-violet-text:#5B21B6;--fk-violet-tint:#F3EEFF;}
+.fk-f-amber-soft{fill:var(--fk-amber-soft)}.fk-s-amber-soft{stroke:var(--fk-amber-soft)}
+.fk-f-amber-strong{fill:var(--fk-amber-strong)}.fk-s-amber-strong{stroke:var(--fk-amber-strong)}
+.fk-f-amber-text{fill:var(--fk-amber-text)}.fk-s-amber-text{stroke:var(--fk-amber-text)}
+.fk-f-amber-tint{fill:var(--fk-amber-tint)}.fk-s-amber-tint{stroke:var(--fk-amber-tint)}
+.fk-f-blue-soft{fill:var(--fk-blue-soft)}.fk-s-blue-soft{stroke:var(--fk-blue-soft)}
+.fk-f-blue-strong{fill:var(--fk-blue-strong)}.fk-s-blue-strong{stroke:var(--fk-blue-strong)}
+.fk-f-blue-text{fill:var(--fk-blue-text)}.fk-s-blue-text{stroke:var(--fk-blue-text)}
+.fk-f-blue-tint{fill:var(--fk-blue-tint)}.fk-s-blue-tint{stroke:var(--fk-blue-tint)}
+.fk-f-brand-text{fill:var(--fk-brand-text)}.fk-s-brand-text{stroke:var(--fk-brand-text)}
+.fk-f-canvas{fill:var(--fk-canvas)}.fk-s-canvas{stroke:var(--fk-canvas)}
+.fk-f-card{fill:var(--fk-card)}.fk-s-card{stroke:var(--fk-card)}
+.fk-f-frame{fill:var(--fk-frame)}.fk-s-frame{stroke:var(--fk-frame)}
+.fk-f-hair{fill:var(--fk-hair)}.fk-s-hair{stroke:var(--fk-hair)}
+.fk-f-ink{fill:var(--fk-ink)}.fk-s-ink{stroke:var(--fk-ink)}
+.fk-f-ink2{fill:var(--fk-ink2)}.fk-s-ink2{stroke:var(--fk-ink2)}
+.fk-f-line{fill:var(--fk-line)}.fk-s-line{stroke:var(--fk-line)}
+.fk-f-muted{fill:var(--fk-muted)}.fk-s-muted{stroke:var(--fk-muted)}
+.fk-f-rail{fill:var(--fk-rail)}.fk-s-rail{stroke:var(--fk-rail)}
+.fk-f-teal-soft{fill:var(--fk-teal-soft)}.fk-s-teal-soft{stroke:var(--fk-teal-soft)}
+.fk-f-teal-strong{fill:var(--fk-teal-strong)}.fk-s-teal-strong{stroke:var(--fk-teal-strong)}
+.fk-f-teal-text{fill:var(--fk-teal-text)}.fk-s-teal-text{stroke:var(--fk-teal-text)}
+.fk-f-teal-tint{fill:var(--fk-teal-tint)}.fk-s-teal-tint{stroke:var(--fk-teal-tint)}
+.fk-f-violet-soft{fill:var(--fk-violet-soft)}.fk-s-violet-soft{stroke:var(--fk-violet-soft)}
+.fk-f-violet-strong{fill:var(--fk-violet-strong)}.fk-s-violet-strong{stroke:var(--fk-violet-strong)}
+.fk-f-violet-text{fill:var(--fk-violet-text)}.fk-s-violet-text{stroke:var(--fk-violet-text)}
+.fk-f-violet-tint{fill:var(--fk-violet-tint)}.fk-s-violet-tint{stroke:var(--fk-violet-tint)}
+@media (forced-colors:active){.fk text{fill:CanvasText}.fk rect,.fk circle{fill:Canvas;stroke:CanvasText}.fk path{stroke:CanvasText}.fk marker path{fill:CanvasText;stroke:none}}
+</style>
+<defs><marker id="driver-layers-arrow-rail" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fk-f-rail"/></marker></defs>
+<rect x="0.5" y="0.5" width="1175" height="347" rx="16" class="fk-f-canvas fk-s-frame"/>
+<text x="32" y="44" font-size="12.5" font-weight="700" letter-spacing="1.2" class="fk-f-brand-text">KOKEB LABS DRIVERS</text>
+<text x="32" y="77.3" font-size="26" font-weight="700" class="fk-f-ink">A driver sits between your code and the chip</text>
+<text x="32" y="103.8" font-size="15" class="fk-f-muted">The driver and the port contract are the same on every MCU. Only the port is yours.</text>
+<rect x="32" y="119.8" width="1112" height="1" class="fk-f-hair"/>
+<rect x="32" y="137.8" width="230" height="180" rx="14" stroke-width="1.2" class="fk-f-blue-tint fk-s-blue-soft"/>
+<rect x="326" y="137.8" width="230" height="180" rx="14" stroke-width="1.2" class="fk-f-teal-tint fk-s-teal-soft"/>
+<rect x="620" y="137.8" width="230" height="180" rx="14" stroke-width="1.2" class="fk-f-amber-tint fk-s-amber-soft"/>
+<rect x="914" y="137.8" width="230" height="180" rx="14" stroke-width="1.2" class="fk-f-violet-tint fk-s-violet-soft"/>
+<path d="M254 225.3 L286 225.3 Q294 225.3 294 233.3 L294 236.3 Q294 244.3 302 244.3 L334 244.3" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#driver-layers-arrow-rail)" class="fk-s-rail"/>
+<path d="M548 244.3 L628 244.3" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#driver-layers-arrow-rail)" class="fk-s-rail"/>
+<path d="M842 244.3 L874 244.3 Q882 244.3 882 236.3 L882 233.3 Q882 225.3 890 225.3 L922 225.3" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#driver-layers-arrow-rail)" class="fk-s-rail"/>
+<rect x="44" y="190.8" width="206" height="69" rx="10" stroke-width="1" class="fk-f-card fk-s-line"/>
+<rect x="44" y="198.8" width="4" height="53" rx="2" class="fk-f-blue-strong"/>
+<rect x="338" y="190.8" width="206" height="107" rx="10" stroke-width="1" class="fk-f-card fk-s-line"/>
+<rect x="338" y="198.8" width="4" height="91" rx="2" class="fk-f-teal-strong"/>
+<rect x="632" y="190.8" width="206" height="107" rx="10" stroke-width="1" class="fk-f-card fk-s-line"/>
+<rect x="632" y="198.8" width="4" height="91" rx="2" class="fk-f-amber-strong"/>
+<rect x="926" y="190.8" width="206" height="69" rx="10" stroke-width="1" class="fk-f-card fk-s-line"/>
+<rect x="926" y="198.8" width="4" height="53" rx="2" class="fk-f-violet-strong"/>
+<text x="48" y="162.8" font-size="13" font-weight="700" class="fk-f-blue-text">APPLICATION</text>
+<text x="342" y="162.8" font-size="13" font-weight="700" class="fk-f-teal-text">DRIVER</text>
+<text x="636" y="162.8" font-size="13" font-weight="700" class="fk-f-amber-text">PORT</text>
+<text x="930" y="162.8" font-size="13" font-weight="700" class="fk-f-violet-text">CHIP</text>
+<text x="64" y="217.6" font-size="15" font-weight="700" class="fk-f-ink">Your code</text>
+<text x="64" y="242.4" font-size="13" class="fk-f-ink2">calls the driver</text>
+<text x="358" y="217.6" font-size="15" font-weight="700" class="fk-f-ink">driver-chip</text>
+<text x="358" y="242.4" font-size="13" class="fk-f-ink2">chip logic</text>
+<text x="358" y="261.2" font-size="13" class="fk-f-ink2">same on every MCU</text>
+<text x="358" y="280.1" font-size="13" class="fk-f-ink2">results you must check</text>
+<text x="652" y="217.6" font-size="15" font-weight="700" class="fk-f-ink">Bus functions</text>
+<text x="652" y="242.4" font-size="13" class="fk-f-ink2">SPI or I2C or UART or</text>
+<text x="652" y="261.2" font-size="13" class="fk-f-ink2">ADC</text>
+<text x="652" y="280.1" font-size="13" class="fk-f-ink2">you write it once</text>
+<text x="946" y="217.6" font-size="15" font-weight="700" class="fk-f-ink">The part</text>
+<text x="946" y="242.4" font-size="13" class="fk-f-ink2">on your board</text>
+<rect x="274.1" y="224.8" width="39.8" height="20" rx="10" class="fk-f-canvas"/>
+<text x="294" y="239.1" font-size="12" font-weight="500" text-anchor="middle" class="fk-f-muted">calls</text>
+<rect x="565.1" y="234.3" width="45.8" height="20" rx="10" class="fk-f-canvas"/>
+<text x="588" y="248.6" font-size="12" font-weight="500" text-anchor="middle" class="fk-f-muted">bytes</text>
+<rect x="864.8" y="224.8" width="34.4" height="20" rx="10" class="fk-f-canvas"/>
+<text x="882" y="239.1" font-size="12" font-weight="500" text-anchor="middle" class="fk-f-muted">bus</text>
+</svg>

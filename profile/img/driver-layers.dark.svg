@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1176" height="348" viewBox="0 0 1176 348" role="img" aria-labelledby="driver-layers-title driver-layers-desc" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title id="driver-layers-title">A driver sits between your code and the chip</title>
+<desc id="driver-layers-desc">Pipeline in which your application calls a chip driver, the driver talks to a port that moves bytes on your SPI, I2C, UART or ADC bus, and the port drives the chip.</desc>
+<defs><marker id="driver-layers-arrow-rail" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6C7889"/></marker></defs>
+<rect x="0.5" y="0.5" width="1175" height="347" rx="16" fill="#0E131A" stroke="#283241"/>
+<text x="32" y="44" font-size="12.5" font-weight="700" letter-spacing="1.2" fill="#F8D27A">KOKEB LABS DRIVERS</text>
+<text x="32" y="77.3" font-size="26" font-weight="700" fill="#E8EDF3">A driver sits between your code and the chip</text>
+<text x="32" y="103.8" font-size="15" fill="#9AA6B5">The driver and the port contract are the same on every MCU. Only the port is yours.</text>
+<rect x="32" y="119.8" width="1112" height="1" fill="#252F3C"/>
+<rect x="32" y="137.8" width="230" height="180" rx="14" fill="#13233A" stroke="#2B4C78" stroke-width="1.2"/>
+<rect x="326" y="137.8" width="230" height="180" rx="14" fill="#0F2A28" stroke="#215A54" stroke-width="1.2"/>
+<rect x="620" y="137.8" width="230" height="180" rx="14" fill="#2C2310" stroke="#6A5220" stroke-width="1.2"/>
+<rect x="914" y="137.8" width="230" height="180" rx="14" fill="#221A3A" stroke="#4B3A82" stroke-width="1.2"/>
+<path d="M254 225.3 L286 225.3 Q294 225.3 294 233.3 L294 236.3 Q294 244.3 302 244.3 L334 244.3" fill="none" stroke="#6C7889" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#driver-layers-arrow-rail)"/>
+<path d="M548 244.3 L628 244.3" fill="none" stroke="#6C7889" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#driver-layers-arrow-rail)"/>
+<path d="M842 244.3 L874 244.3 Q882 244.3 882 236.3 L882 233.3 Q882 225.3 890 225.3 L922 225.3" fill="none" stroke="#6C7889" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#driver-layers-arrow-rail)"/>
+<rect x="44" y="190.8" width="206" height="69" rx="10" fill="#151C26" stroke="#6C7889" stroke-width="1"/>
+<rect x="44" y="198.8" width="4" height="53" rx="2" fill="#60A5FA"/>
+<rect x="338" y="190.8" width="206" height="107" rx="10" fill="#151C26" stroke="#6C7889" stroke-width="1"/>
+<rect x="338" y="198.8" width="4" height="91" rx="2" fill="#2BB3A3"/>
+<rect x="632" y="190.8" width="206" height="107" rx="10" fill="#151C26" stroke="#6C7889" stroke-width="1"/>
+<rect x="632" y="198.8" width="4" height="91" rx="2" fill="#FBBF24"/>
+<rect x="926" y="190.8" width="206" height="69" rx="10" fill="#151C26" stroke="#6C7889" stroke-width="1"/>
+<rect x="926" y="198.8" width="4" height="53" rx="2" fill="#A78BFA"/>
+<text x="48" y="162.8" font-size="13" font-weight="700" fill="#BFDBFE">APPLICATION</text>
+<text x="342" y="162.8" font-size="13" font-weight="700" fill="#A7F3E6">DRIVER</text>
+<text x="636" y="162.8" font-size="13" font-weight="700" fill="#FDE68A">PORT</text>
+<text x="930" y="162.8" font-size="13" font-weight="700" fill="#DDD6FE">CHIP</text>
+<text x="64" y="217.6" font-size="15" font-weight="700" fill="#E8EDF3">Your code</text>
+<text x="64" y="242.4" font-size="13" fill="#D2DAE4">calls the driver</text>
+<text x="358" y="217.6" font-size="15" font-weight="700" fill="#E8EDF3">driver-chip</text>
+<text x="358" y="242.4" font-size="13" fill="#D2DAE4">chip logic</text>
+<text x="358" y="261.2" font-size="13" fill="#D2DAE4">same on every MCU</text>
+<text x="358" y="280.1" font-size="13" fill="#D2DAE4">results you must check</text>
+<text x="652" y="217.6" font-size="15" font-weight="700" fill="#E8EDF3">Bus functions</text>
+<text x="652" y="242.4" font-size="13" fill="#D2DAE4">SPI or I2C or UART or</text>
+<text x="652" y="261.2" font-size="13" fill="#D2DAE4">ADC</text>
+<text x="652" y="280.1" font-size="13" fill="#D2DAE4">you write it once</text>
+<text x="946" y="217.6" font-size="15" font-weight="700" fill="#E8EDF3">The part</text>
+<text x="946" y="242.4" font-size="13" fill="#D2DAE4">on your board</text>
+<rect x="274.1" y="224.8" width="39.8" height="20" rx="10" fill="#0E131A"/>
+<text x="294" y="239.1" font-size="12" font-weight="500" text-anchor="middle" fill="#9AA6B5">calls</text>
+<rect x="565.1" y="234.3" width="45.8" height="20" rx="10" fill="#0E131A"/>
+<text x="588" y="248.6" font-size="12" font-weight="500" text-anchor="middle" fill="#9AA6B5">bytes</text>
+<rect x="864.8" y="224.8" width="34.4" height="20" rx="10" fill="#0E131A"/>
+<text x="882" y="239.1" font-size="12" font-weight="500" text-anchor="middle" fill="#9AA6B5">bus</text>
+</svg>

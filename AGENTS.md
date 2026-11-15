@@ -8,7 +8,12 @@ Agents working here or in any driver repository follow the Kokeb Labs
 
 ## This repository
 
-- `profile/README.md`: the organization page. Keep the driver table in step with the repositories.
+- `profile/README.md`: the organization page. The driver catalogue and the summary line between the
+  `GENERATED` markers are written by `python3 tools/gen_profile.py` from the drivers' own repositories; never edit them
+  by hand. A new driver needs a group in that script. CI (`Profile catalogue`) runs `--check` on every pull request
+  and weekly.
+- `profile/img/`: the figures the page shows, light and dark. Their models are in `tools/figures/docs/model/`; rebuild
+  with `tools/build_figures.sh` (needs the `kokeb-mkdocs-theme` package from `kokeb-labs/ci-tools`).
 - Community files: adapted from `kokeb-labs/.github`. A change of rule goes there first, with an ADR.
 - No settings code, tokens or private material here; the organization's settings live in
   `kokeb-labs/.github/org/`.
