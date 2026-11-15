@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Request a new chip driver, port or target
+    url: https://github.com/kokeb-labs-drivers/driver-requests/issues/new/choose
+    about: Requests are triaged in kokeb-labs-drivers/driver-requests; vote with a thumbs-up on an existing one.
   - name: Question or idea
     url: https://github.com/kokeb-labs-drivers/.github/discussions
     about: Ask usage questions and discuss ideas here instead of opening an issue.
