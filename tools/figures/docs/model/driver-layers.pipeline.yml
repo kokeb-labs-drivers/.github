@@ -1,0 +1,39 @@
+---
+kind: pipeline
+id: driver-layers
+title: A driver sits between your code and the chip
+kicker: Kokeb Labs Drivers
+subtitle: The driver and the port contract are the same on every MCU. Only the port is yours.
+alt: >-
+  Pipeline in which your application calls a chip driver, the driver talks to a port that moves bytes on your
+  SPI, I2C, UART or ADC bus, and the port drives the chip.
+reads: >-
+  The Application column is your code, which calls one driver object. The Driver column is the chip logic, the same
+  on every MCU, which turns calls into register reads and writes. The Port column is a small class you write once for
+  your bus and MCU. The Chip column is the part on your board.
+print: landscape
+columns:
+  - id: app
+    title: Application
+    tone: blue
+    items:
+      - {id: app, title: Your code, lines: [calls the driver]}
+  - id: driver
+    title: Driver
+    tone: teal
+    items:
+      - {id: driver, title: driver-chip, lines: [chip logic, same on every MCU, results you must check]}
+  - id: port
+    title: Port
+    tone: amber
+    items:
+      - {id: port, title: Bus functions, lines: [SPI or I2C or UART or ADC, you write it once]}
+  - id: chip
+    title: Chip
+    tone: violet
+    items:
+      - {id: chip, title: The part, lines: [on your board]}
+links:
+  - {from: app, to: driver, label: calls}
+  - {from: driver, to: port, label: bytes}
+  - {from: port, to: chip, label: bus}

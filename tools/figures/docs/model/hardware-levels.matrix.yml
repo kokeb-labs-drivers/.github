@@ -1,0 +1,29 @@
+---
+kind: matrix
+id: hardware-levels
+title: What each hardware level means
+kicker: Hardware validation
+subtitle: A claim about hardware is as strong as its evidence, and no stronger.
+alt: >-
+  Matrix of the three hardware validation levels H0, H1 and H2 against the evidence each one needs - host tests
+  against a model, a bench rig run with kept logs, and a hardware engineer sign-off.
+reads: >-
+  The columns are the levels H0 host model only, H1 bench exercised and H2 hardware verified. The rows are the evidence
+  host tests and fuzzing against a model of the chip, a bench rig run on the real chip with logs kept, and a sign-off
+  by a hardware engineer. Each cell says whether the level needs that evidence.
+print: landscape
+rows:
+  - {id: host, label: Host tests and fuzz against a model}
+  - {id: bench, label: Bench rig run on the real chip}
+  - {id: eng, label: Hardware engineer sign-off}
+cols: [{id: h0, label: H0 host model only}, {id: h1, label: H1 bench exercised}, {id: h2, label: H2 hardware verified}]
+cells:
+  - {row: host, col: h0, status: ok, text: required}
+  - {row: host, col: h1, status: ok, text: required}
+  - {row: host, col: h2, status: ok, text: required}
+  - {row: bench, col: h0, status: na, text: not run}
+  - {row: bench, col: h1, status: ok, text: logs kept}
+  - {row: bench, col: h2, status: ok, text: logs kept}
+  - {row: eng, col: h0, status: na, text: not needed}
+  - {row: eng, col: h1, status: na, text: not needed}
+  - {row: eng, col: h2, status: ok, text: signed off}

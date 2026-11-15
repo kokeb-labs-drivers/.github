@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="731" height="385" viewBox="0 0 731 385" role="img" aria-labelledby="hardware-levels-title hardware-levels-desc" font-family="Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+<title id="hardware-levels-title">What each hardware level means</title>
+<desc id="hardware-levels-desc">Matrix of the three hardware validation levels H0, H1 and H2 against the evidence each one needs - host tests against a model, a bench rig run with kept logs, and a hardware engineer sign-off.</desc>
+<rect x="0.5" y="0.5" width="730" height="384" rx="16" fill="#0E131A" stroke="#283241"/>
+<text x="32" y="44" font-size="12.5" font-weight="700" letter-spacing="1.2" fill="#F8D27A">HARDWARE VALIDATION</text>
+<text x="32" y="77.3" font-size="26" font-weight="700" fill="#E8EDF3">What each hardware level means</text>
+<text x="32" y="103.8" font-size="15" fill="#9AA6B5">A claim about hardware is as strong as its evidence, and no stronger.</text>
+<rect x="32" y="119.8" width="667" height="1" fill="#252F3C"/>
+<rect x="310.2" y="180.8" width="122" height="54" rx="10" fill="#11281A" stroke="#4ADE80" stroke-width="1.4"/>
+<path d="M325 207.8 L329 212.8 L338 201.8" fill="none" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="438.2" y="180.8" width="122" height="54" rx="10" fill="#11281A" stroke="#4ADE80" stroke-width="1.4"/>
+<path d="M453 207.8 L457 212.8 L466 201.8" fill="none" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="566.2" y="180.8" width="122" height="54" rx="10" fill="#11281A" stroke="#4ADE80" stroke-width="1.4"/>
+<path d="M581 207.8 L585 212.8 L594 201.8" fill="none" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="310.2" y="240.8" width="122" height="54" rx="10" fill="#1B232E" stroke="#94A3B8" stroke-width="1.4"/>
+<path d="M329.4 267.8 L341.4 267.8" fill="none" stroke="#94A3B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="438.2" y="240.8" width="122" height="54" rx="10" fill="#11281A" stroke="#4ADE80" stroke-width="1.4"/>
+<path d="M450.6 267.8 L454.6 272.8 L463.6 261.8" fill="none" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="566.2" y="240.8" width="122" height="54" rx="10" fill="#11281A" stroke="#4ADE80" stroke-width="1.4"/>
+<path d="M578.6 267.8 L582.6 272.8 L591.6 261.8" fill="none" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="310.2" y="300.8" width="122" height="54" rx="10" fill="#1B232E" stroke="#94A3B8" stroke-width="1.4"/>
+<path d="M315.6 327.8 L327.6 327.8" fill="none" stroke="#94A3B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="438.2" y="300.8" width="122" height="54" rx="10" fill="#1B232E" stroke="#94A3B8" stroke-width="1.4"/>
+<path d="M443.6 327.8 L455.6 327.8" fill="none" stroke="#94A3B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="566.2" y="300.8" width="122" height="54" rx="10" fill="#11281A" stroke="#4ADE80" stroke-width="1.4"/>
+<path d="M575.4 327.8 L579.4 332.8 L588.4 321.8" fill="none" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="371.2" y="165.8" font-size="13" font-weight="700" text-anchor="middle" fill="#E8EDF3">H0 host model only</text>
+<text x="499.2" y="165.8" font-size="13" font-weight="700" text-anchor="middle" fill="#E8EDF3">H1 bench exercised</text>
+<text x="627.2" y="165.8" font-size="13" font-weight="700" text-anchor="middle" fill="#E8EDF3">H2 hardware verified</text>
+<text x="43.8" y="212.8" font-size="13" font-weight="700" fill="#E8EDF3">Host tests and fuzz against a model</text>
+<text x="381.2" y="212.8" font-size="13" font-weight="600" text-anchor="middle" fill="#BBF7D0">required</text>
+<text x="509.2" y="212.8" font-size="13" font-weight="600" text-anchor="middle" fill="#BBF7D0">required</text>
+<text x="637.2" y="212.8" font-size="13" font-weight="600" text-anchor="middle" fill="#BBF7D0">required</text>
+<text x="43.8" y="272.8" font-size="13" font-weight="700" fill="#E8EDF3">Bench rig run on the real chip</text>
+<text x="381.2" y="272.8" font-size="13" font-weight="600" text-anchor="middle" fill="#E2E8F0">not run</text>
+<text x="509.2" y="272.8" font-size="13" font-weight="600" text-anchor="middle" fill="#BBF7D0">logs kept</text>
+<text x="637.2" y="272.8" font-size="13" font-weight="600" text-anchor="middle" fill="#BBF7D0">logs kept</text>
+<text x="43.8" y="332.8" font-size="13" font-weight="700" fill="#E8EDF3">Hardware engineer sign-off</text>
+<text x="381.2" y="332.8" font-size="13" font-weight="600" text-anchor="middle" fill="#E2E8F0">not needed</text>
+<text x="509.2" y="332.8" font-size="13" font-weight="600" text-anchor="middle" fill="#E2E8F0">not needed</text>
+<text x="637.2" y="332.8" font-size="13" font-weight="600" text-anchor="middle" fill="#BBF7D0">signed off</text>
+</svg>

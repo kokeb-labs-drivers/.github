@@ -1,0 +1,53 @@
+---
+kind: pipeline
+id: driver-pipeline
+title: How a driver is built
+kicker: Request to release
+subtitle: Eleven steps in five stages. Nothing is released on one author's word.
+alt: >-
+  Pipeline from a driver request through triage, design, build, independent review, a private CI rehearsal, a
+  clean public copy, a release candidate and hardware validation to a release.
+reads: >-
+  The Intake column holds the request and its triage. The Make column holds placement, design and build. The Check
+  column holds the independent review and the private CI rehearsal. The Publish column holds the clean public copy and
+  the release candidate. The Prove column holds hardware validation and the release.
+print: landscape
+gap: 40
+column_width: 210
+columns:
+  - id: intake
+    title: Intake
+    tone: blue
+    items:
+      - {id: request, title: 1 Request, lines: [one chip, a public datasheet link]}
+      - {id: triage, title: 2 Triage, lines: [duplicates, scope, documents]}
+  - id: make
+    title: Make
+    tone: teal
+    items:
+      - {id: placement, title: 3 Placement, lines: [which repository]}
+      - {id: design, title: 4 Design, lines: [architecture note]}
+      - {id: build, title: 5 Build, lines: ["code, tests, docs"]}
+  - id: check
+    title: Check
+    tone: amber
+    items:
+      - {id: review, title: 6 Independent review, lines: [reviewed apart from the author]}
+      - {id: rehearsal, title: 7 Private CI rehearsal, lines: [full checks before anything is public]}
+  - id: publish
+    title: Publish
+    tone: violet
+    items:
+      - {id: copy, title: 8 Clean public copy, lines: [made after the rehearsal passes]}
+      - {id: rc, title: 9 Release candidate, lines: ["tag vX.Y.Z-rc.N"]}
+  - id: prove
+    title: Prove
+    tone: green
+    items:
+      - {id: hardware, title: 10 Hardware validation, lines: [levels H0 to H2]}
+      - {id: release, title: 11 Release, lines: ["tag vX.Y.Z"]}
+links:
+  - {from: triage, to: placement}
+  - {from: build, to: review}
+  - {from: rehearsal, to: copy}
+  - {from: rc, to: hardware}

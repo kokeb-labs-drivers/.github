@@ -1,0 +1,53 @@
+{
+  "driver-layers": {
+    "title": "A driver sits between your code and the chip",
+    "alt": "Pipeline in which your application calls a chip driver, the driver talks to a port that moves bytes on your SPI, I2C, UART or ADC bus, and the port drives the chip.",
+    "description": "The Application column is your code, which calls one driver object. The Driver column is the chip logic, the same on every MCU, which turns calls into register reads and writes. The Port column is a small class you write once for your bus and MCU. The Chip column is the part on your board.",
+    "profile": "detail",
+    "width": 1176,
+    "source": "docs/model/driver-layers.pipeline.yml",
+    "sources": [
+      "docs/model/driver-layers.pipeline.yml"
+    ],
+    "kind": "pipeline",
+    "palette": 2,
+    "print": "landscape",
+    "adaptive": true,
+    "twin": false,
+    "font": ""
+  },
+  "driver-pipeline": {
+    "title": "How a driver is built",
+    "alt": "Pipeline from a driver request through triage, design, build, independent review, a private CI rehearsal, a clean public copy, a release candidate and hardware validation to a release.",
+    "description": "The Intake column holds the request and its triage. The Make column holds placement, design and build. The Check column holds the independent review and the private CI rehearsal. The Publish column holds the clean public copy and the release candidate. The Prove column holds hardware validation and the release.",
+    "profile": "detail",
+    "width": 1274,
+    "source": "docs/model/driver-pipeline.pipeline.yml",
+    "sources": [
+      "docs/model/driver-pipeline.pipeline.yml"
+    ],
+    "kind": "pipeline",
+    "palette": 2,
+    "print": "landscape",
+    "adaptive": true,
+    "twin": false,
+    "font": ""
+  },
+  "hardware-levels": {
+    "title": "What each hardware level means",
+    "alt": "Matrix of the three hardware validation levels H0, H1 and H2 against the evidence each one needs - host tests against a model, a bench rig run with kept logs, and a hardware engineer sign-off.",
+    "description": "The columns are the levels H0 host model only, H1 bench exercised and H2 hardware verified. The rows are the evidence host tests and fuzzing against a model of the chip, a bench rig run on the real chip with logs kept, and a sign-off by a hardware engineer. Each cell says whether the level needs that evidence.",
+    "profile": "detail",
+    "width": 731,
+    "source": "docs/model/hardware-levels.matrix.yml",
+    "sources": [
+      "docs/model/hardware-levels.matrix.yml"
+    ],
+    "kind": "matrix",
+    "palette": 2,
+    "print": "landscape",
+    "adaptive": true,
+    "twin": true,
+    "font": ""
+  }
+}
