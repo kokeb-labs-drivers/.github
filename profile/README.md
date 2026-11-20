@@ -20,7 +20,8 @@ the same CI, reviewed independently and held to one engineering standard.
 </picture>
 
 <!-- BEGIN GENERATED: summary -->
-**22 public drivers.** All 22 are at a release candidate. Language standard today: C++20. Hardware level: 22 at H0.
+**23 public drivers.** 22 of 23 are at a release candidate, the rest at a full release. Language standard today: C++20.
+Hardware level: 23 at H0. Safety class: 4 passive, 9 sensing, 10 actuating.
 <!-- END GENERATED: summary -->
 
 ## How a driver is built
@@ -89,70 +90,76 @@ build files and latest release) by [`tools/gen_profile.py`](tools/gen_profile.py
 <!-- BEGIN GENERATED: catalogue -->
 ### Analog-to-digital converters
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-ads7952`](https://github.com/kokeb-labs-drivers/driver-ads7952) | TI ADS7950/51/52/53 12-bit 4/8/12/16-channel SPI ADCs | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-ads9324`](https://github.com/kokeb-labs-drivers/driver-ads9324) | TI ADS9324 16-channel, 16-bit, 1 MSPS simultaneous-sampling SAR ADC with integrated PGA and SPI interface | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-ads7952`](https://github.com/kokeb-labs-drivers/driver-ads7952) | TI ADS7950/51/52/53 12-bit 4/8/12/16-channel SPI ADCs | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
+| [`driver-ads9324`](https://github.com/kokeb-labs-drivers/driver-ads9324) | TI ADS9324 16-channel, 16-bit, 1 MSPS simultaneous-sampling SAR ADC with integrated PGA and SPI interface | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
 
 ### Position and motion sensing
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-as5047u`](https://github.com/kokeb-labs-drivers/driver-as5047u) | ams OSRAM AS5047U 14-bit magnetic rotary position sensor (SPI) | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-bno08x`](https://github.com/kokeb-labs-drivers/driver-bno08x) | Hillcrest Labs / CEVA BNO08x family of 9-axis orientation sensors over SHTP, with I2C, SPI and UART-RVC transports | I2C, SPI, UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-as5047u`](https://github.com/kokeb-labs-drivers/driver-as5047u) | ams OSRAM AS5047U 14-bit magnetic rotary position sensor (SPI) | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
+| [`driver-bno08x`](https://github.com/kokeb-labs-drivers/driver-bno08x) | Hillcrest Labs / CEVA BNO08x family of 9-axis orientation sensors over SHTP, with I2C, SPI and UART-RVC transports | I2C, SPI, UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
 
 ### Motor and servo control
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-tmc5160`](https://github.com/kokeb-labs-drivers/driver-tmc5160) | Trinamic TMC5160 and TMC5160A stepper motor controller and driver with SPI and UART interfaces | SPI, UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-tmc9660`](https://github.com/kokeb-labs-drivers/driver-tmc9660) | TMC9660 servo controller and gate driver (bootloader, parameter mode and register mode over SPI or UART) | SPI, UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-dynamixel`](https://github.com/kokeb-labs-drivers/driver-dynamixel) | ROBOTIS DYNAMIXEL servos, protocols 1.0 and 2.0, over a half-duplex UART | UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-tmc5160`](https://github.com/kokeb-labs-drivers/driver-tmc5160) | Trinamic TMC5160 and TMC5160A stepper motor controller and driver with SPI and UART interfaces | SPI, UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-tmc9660`](https://github.com/kokeb-labs-drivers/driver-tmc9660) | TMC9660 servo controller and gate driver (bootloader, parameter mode and register mode over SPI or UART) | SPI, UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-dynamixel`](https://github.com/kokeb-labs-drivers/driver-dynamixel) | ROBOTIS DYNAMIXEL servos, protocols 1.0 and 2.0, over a half-duplex UART | UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
 
 ### Fieldbus and communication
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-canopen-client`](https://github.com/kokeb-labs-drivers/driver-canopen-client) | CANopen client driver: NMT master, SDO, heartbeat, EMCY, PDO and a CiA 402 drive state machine over a CAN frame port | CANopen | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-canopen-client`](https://github.com/kokeb-labs-drivers/driver-canopen-client) | CANopen client driver: NMT master, SDO, heartbeat, EMCY, PDO and a CiA 402 drive state machine over a CAN frame port | CANopen | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+
+### Security
+
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-se05x`](https://github.com/kokeb-labs-drivers/driver-se05x) | NXP EdgeLock SE05x secure elements (SE050, SE051, SE052) over I2C with T=1: keys, signatures, ECDH, attestation, secure storage, certificates and SCP03, with an easy hardware root-of-trust facade | I2C | C++20 | `none yet` | H0 host model | Passive |
 
 ### Solenoid, valve and power
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-max22200`](https://github.com/kokeb-labs-drivers/driver-max22200) | Analog Devices MAX22200 octal solenoid and motor driver (SPI) | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-tle92466ed`](https://github.com/kokeb-labs-drivers/driver-tle92466ed) | Infineon TLE92466ED six-channel low-side solenoid driver (SPI) | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-pf1550`](https://github.com/kokeb-labs-drivers/driver-pf1550) | NXP PF1550 power management IC: single-cell Li-ion linear charger, three buck regulators and three LDOs, on I2C | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-max22200`](https://github.com/kokeb-labs-drivers/driver-max22200) | Analog Devices MAX22200 octal solenoid and motor driver (SPI) | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-tle92466ed`](https://github.com/kokeb-labs-drivers/driver-tle92466ed) | Infineon TLE92466ED six-channel low-side solenoid driver (SPI) | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-pf1550`](https://github.com/kokeb-labs-drivers/driver-pf1550) | NXP PF1550 power management IC: single-cell Li-ion linear charger, three buck regulators and three LDOs, on I2C | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
 
 ### GPIO, PWM and LEDs
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-pcal9555`](https://github.com/kokeb-labs-drivers/driver-pcal9555) | NXP PCA9555 and PCAL9555A 16-bit I2C GPIO expanders | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-pca9685`](https://github.com/kokeb-labs-drivers/driver-pca9685) | NXP PCA9685 16-channel 12-bit PWM controller (I2C) | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-ws2812-rmt`](https://github.com/kokeb-labs-drivers/driver-ws2812-rmt) | single-wire addressable RGB and RGBW LEDs (WS2812, SK6812 and compatible) over a timed bit stream, with an ESP32 RMT port | PIO (ESP32 only) | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-pcal9555`](https://github.com/kokeb-labs-drivers/driver-pcal9555) | NXP PCA9555 and PCAL9555A 16-bit I2C GPIO expanders | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-pca9685`](https://github.com/kokeb-labs-drivers/driver-pca9685) | NXP PCA9685 16-channel 12-bit PWM controller (I2C) | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-ws2812-rmt`](https://github.com/kokeb-labs-drivers/driver-ws2812-rmt) | single-wire addressable RGB and RGBW LEDs (WS2812, SK6812 and compatible) over a timed bit stream, with an ESP32 RMT port | PIO (ESP32 only) | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Passive |
 
 ### Memory
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-at25040b`](https://github.com/kokeb-labs-drivers/driver-at25040b) | Microchip AT25010B/020B/040B SPI serial EEPROMs | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-at25040b`](https://github.com/kokeb-labs-drivers/driver-at25040b) | Microchip AT25010B/020B/040B SPI serial EEPROMs | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Passive |
 
 ### Display and buttons
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-isf15acp4`](https://github.com/kokeb-labs-drivers/driver-isf15acp4) | NKK SmartDisplay OLED pushbuttons and displays (ISF15ACP4, ISC15ANP4, ISC01P) over SPI | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-isf15acp4`](https://github.com/kokeb-labs-drivers/driver-isf15acp4) | NKK SmartDisplay OLED pushbuttons and displays (ISF15ACP4, ISC15ANP4, ISC01P) over SPI | SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Passive |
 
 ### Temperature, pressure, flow and gas sensors
 
-| Driver | Chip or device | Bus | Standard | Latest release | Hardware |
-| --- | --- | --- | --- | --- | --- |
-| [`driver-bmp581`](https://github.com/kokeb-labs-drivers/driver-bmp581) | Bosch BMP581 barometric pressure and temperature sensor (I2C, SPI) | I2C, SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-mcp9700`](https://github.com/kokeb-labs-drivers/driver-mcp9700) | Microchip MCP9700, MCP9700A, MCP9701 and MCP9701A analog temperature sensors (ADC) | ADC | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-ntc-thermistor`](https://github.com/kokeb-labs-drivers/driver-ntc-thermistor) | NTC thermistors on an ADC, any part: B-parameter, Steinhart-Hart and lookup tables | ADC | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-sfm-flow-meter`](https://github.com/kokeb-labs-drivers/driver-sfm-flow-meter) | Sensirion SFM family of I2C mass flow meters (SFM3000 to SFM6000D) | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-alicat-basis2`](https://github.com/kokeb-labs-drivers/driver-alicat-basis2) | Alicat BASIS 2 gas mass flow meters and controllers (B and BC series) over serial, with the ASCII protocol and Modbus RTU | UART, Modbus | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
-| [`driver-fdo2`](https://github.com/kokeb-labs-drivers/driver-fdo2) | PyroScience FDO2 optical oxygen sensor modules on UART | UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model |
+| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`driver-bmp581`](https://github.com/kokeb-labs-drivers/driver-bmp581) | Bosch BMP581 barometric pressure and temperature sensor (I2C, SPI) | I2C, SPI | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
+| [`driver-mcp9700`](https://github.com/kokeb-labs-drivers/driver-mcp9700) | Microchip MCP9700, MCP9700A, MCP9701 and MCP9701A analog temperature sensors (ADC) | ADC | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
+| [`driver-ntc-thermistor`](https://github.com/kokeb-labs-drivers/driver-ntc-thermistor) | NTC thermistors on an ADC, any part: B-parameter, Steinhart-Hart and lookup tables | ADC | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
+| [`driver-sfm-flow-meter`](https://github.com/kokeb-labs-drivers/driver-sfm-flow-meter) | Sensirion SFM family of I2C mass flow meters (SFM3000 to SFM6000D) | I2C | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
+| [`driver-alicat-basis2`](https://github.com/kokeb-labs-drivers/driver-alicat-basis2) | Alicat BASIS 2 gas mass flow meters and controllers (B and BC series) over serial, with the ASCII protocol and Modbus RTU | UART, Modbus | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Actuating |
+| [`driver-fdo2`](https://github.com/kokeb-labs-drivers/driver-fdo2) | PyroScience FDO2 optical oxygen sensor modules on UART | UART | C++20 | `v0.1.0-rc.1` (release candidate) | H0 host model | Sensing |
 <!-- END GENERATED: catalogue -->
 
 Ports for common MCU families and a shared core that joins drivers to them are coming; they are not public yet.
