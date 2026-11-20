@@ -20,7 +20,8 @@ the same CI, reviewed independently and held to one engineering standard.
 </picture>
 
 <!-- BEGIN GENERATED: summary -->
-**23 public drivers.** 22 of 23 are at a release candidate, the rest at a full release. Language standard today: C++20. Hardware level: 23 at H0. Safety class: 4 passive, 9 sensing, 10 actuating.
+**23 public drivers.** 22 of 23 are at a release candidate, the rest at a full release. Language standard today: C++20.
+Hardware level: 23 at H0. Safety class: 4 passive, 9 sensing, 10 actuating.
 <!-- END GENERATED: summary -->
 
 ## How a driver is built

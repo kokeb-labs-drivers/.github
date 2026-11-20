@@ -165,7 +165,8 @@ def render(all_facts: list[dict]) -> tuple[str, str]:
     state = (f"All {n} are at a release candidate." if rcs == n else
              f"{rcs} of {n} are at a release candidate, the rest at a full release.")
     summary = (f"**{n} public drivers.** {state} "
-               f"Language standard today: {', '.join(stds)}. Hardware level: {', '.join(parts)}. Safety class: {kinds}.")
+               f"Language standard today: {', '.join(stds)}.\n"
+               f"Hardware level: {', '.join(parts)}. Safety class: {kinds}.")
     return "\n".join(out).rstrip() + "\n", summary
 
 
