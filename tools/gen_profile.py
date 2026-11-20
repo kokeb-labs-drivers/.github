@@ -7,7 +7,7 @@ Between the markers
     <!-- BEGIN GENERATED: summary -->    ...  <!-- END GENERATED: summary -->
 
 the script writes a table per function group. Every cell is read from the driver's repository through the GitHub
-API: the description (chip), driver.yml (bus, MCU family, hardware level), CMakeLists.txt (C++ standard) and the
+API: the description (chip), driver.yml (bus, MCU family, hardware level, safety class), CMakeLists.txt (C++ standard) and the
 latest release (tag, release candidate or not). Only the grouping below is curated; a driver with no group makes
 the script fail, so a new driver cannot be left off the page.
 
@@ -42,6 +42,7 @@ GROUPS = [
     ("Position and motion sensing", ["driver-as5047u", "driver-bno08x"]),
     ("Motor and servo control", ["driver-tmc5160", "driver-tmc9660", "driver-dynamixel"]),
     ("Fieldbus and communication", ["driver-canopen-client"]),
+    ("Security", ["driver-se05x"]),
     ("Solenoid, valve and power", ["driver-max22200", "driver-tle92466ed", "driver-pf1550"]),
     ("GPIO, PWM and LEDs", ["driver-pcal9555", "driver-pca9685", "driver-ws2812-rmt"]),
     ("Memory", ["driver-at25040b"]),
@@ -52,6 +53,7 @@ GROUPS = [
 ]
 BUS_NAMES = {"canopen": "CANopen", "modbus": "Modbus", "onewire": "1-Wire"}
 LEVELS = {"H0": "H0 host model", "H1": "H1 bench", "H2": "H2 verified"}
+SAFETY = {"passive": "Passive", "sensing": "Sensing", "actuating": "Actuating", "unclassified": "Not classified"}
 
 
 def token() -> str:
@@ -110,6 +112,7 @@ def facts(repo: dict) -> dict:
     found = re.finditer(r"cxx_std_(\d+)|CMAKE_CXX_STANDARD\s+(\d+)", cmake)
     std = sorted({int(m.group(1) or m.group(2)) for m in found})
     level = re.search(r"^\s+level:\s*(H[012])\b", meta, re.M)
+    safety = re.search(r"^safety:[ \t]*(?:#.*)?\n(?:[ \t]+\S.*\n)*?[ \t]+class:\s*(passive|sensing|actuating)\b", meta, re.M)
     mcus = yaml_list(meta, "mcus")
     desc = re.sub(r"^C\+\+\d+ (?:(?:driver|library) for (?:the )?)?", "", repo.get("description") or "").rstrip(".")
     return {
@@ -122,6 +125,7 @@ def facts(repo: dict) -> dict:
         "tag": releases[0]["tag_name"] if releases else "none yet",
         "rc": bool(releases and releases[0]["prerelease"]),
         "level": level.group(1) if level else "H0",
+        "safety": safety.group(1) if safety else "unclassified",
     }
 
 
@@ -143,23 +147,25 @@ def render(all_facts: list[dict]) -> tuple[str, str]:
         sys.exit(f"gen_profile: GROUPS lists {', '.join(gone)}, which is not a public driver; remove it")
     out = []
     for title, names in GROUPS:
-        out += [f"### {title}", "", "| Driver | Chip or device | Bus | Standard | Latest release | Hardware |",
-                "| --- | --- | --- | --- | --- | --- |"]
+        out += [f"### {title}", "", "| Driver | Chip or device | Bus | Standard | Latest release | Hardware | Safety class |",
+                "| --- | --- | --- | --- | --- | --- | --- |"]
         for n in names:
             f = by_name[n]
             tag = f"`{f['tag']}`" + (" (release candidate)" if f["rc"] else "")
             out.append(f"| [`{n}`](https://github.com/{ORG}/{n}) | {f['what']} | {bus_cell(f)} | {f['std']} | "
-                       f"{tag} | {LEVELS[f['level']]} |")
+                       f"{tag} | {LEVELS[f['level']]} | {SAFETY[f['safety']]} |")
         out.append("")
     n = len(all_facts)
     rcs = sum(f["rc"] for f in all_facts)
     stds = sorted({f["std"] for f in all_facts})
     levels = {lv: sum(f["level"] == lv for f in all_facts) for lv in LEVELS}
     parts = [f"{levels[lv]} at {lv}" for lv in LEVELS if levels[lv]]
+    classes = {k: sum(f["safety"] == k for f in all_facts) for k in SAFETY}
+    kinds = ", ".join(f"{classes[k]} {SAFETY[k].lower()}" for k in SAFETY if classes[k])
     state = (f"All {n} are at a release candidate." if rcs == n else
              f"{rcs} of {n} are at a release candidate, the rest at a full release.")
     summary = (f"**{n} public drivers.** {state} "
-               f"Language standard today: {', '.join(stds)}. Hardware level: {', '.join(parts)}.")
+               f"Language standard today: {', '.join(stds)}. Hardware level: {', '.join(parts)}. Safety class: {kinds}.")
     return "\n".join(out).rstrip() + "\n", summary
 
 
